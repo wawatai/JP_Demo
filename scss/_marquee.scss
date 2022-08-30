@@ -1,5 +1,7 @@
 .marquee {
   width: 100%;
+  min-width: 1400px;
+  height: 100%;
   padding-top: 69px;
   box-sizing: border-box;
   position: relative;
@@ -9,7 +11,7 @@
     width: 100%;
     height: 30px;
     background: $mqBG;
-    padding: 9px 10px 10px 220px;
+    padding: 9px 10px;
     box-sizing: border-box;
     position: absolute;
     top: 100px;
@@ -25,10 +27,12 @@
     }
 
     .textBox {
-      width: 70%;
+      width: 100%;
+      max-width: 1400px;
       height: 30px;
       overflow: hidden;
       white-space: nowrap;
+      margin: 0 auto;
       position: relative;
 
       .content {
@@ -49,10 +53,16 @@
 
   .bannerArea {
     width: 100%;
-    height: 0;
-    background-size: contain;
+    max-height: fit-content;
+    overflow-x: hidden;
     border-bottom: 2px solid $mqBoder;
     position: relative;
+
+    .banner {
+      width: 100%;
+      max-height: 413px;
+      object-fit: cover;
+    }
 
     &::before,
     &::after {

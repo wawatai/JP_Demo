@@ -1,7 +1,6 @@
 .mainWrap {
   width: 100%;
   height: auto;
-  padding-top: 406px;
 
   .titleArea {
     width: 100%;
@@ -9,7 +8,7 @@
   }
 
   .center {
-    width: 1500px;
+    width: 1400px;
     height: auto;
     margin: 0 auto;
 
@@ -17,13 +16,13 @@
       width: 100%;
       height: auto;
       display: grid;
-      grid-template-columns: repeat(3, 485px);
+      grid-template-columns: repeat(3, 446px);
       grid-template-rows: repeat(2, 189px);
       gap: 80px 20px;
       padding: 77px 0;
 
       .gameBlock {
-        width: 485px;
+        width: 446px;
         height: 168px;
         background: $gameTypeBG;
         border-radius: 28px;
@@ -36,6 +35,9 @@
         &:hover,
         &:active,
         &.active {
+          .typePic {
+            transform: scale(1);
+          }
           .typePic.sport::before {
             transform: translate(15px, -5%);
             transition: all 0.2s ease-in;
@@ -70,7 +72,7 @@
         }
 
         .typePic {
-          width: 467px;
+          width: 427px;
           height: 150px;
           border-radius: 16px;
           box-shadow: 2px 2px 2px 2px $gametypeBoder;
@@ -144,7 +146,7 @@
             height: 241px;
             position: absolute;
             bottom: 0;
-            left: 0;
+            left: -10px;
           }
 
           &::after {

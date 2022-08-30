@@ -13,11 +13,6 @@ header nav .navDeco {
   background: url(../img/Icon_mq.png) no-repeat;
 }
 
-.mainWrap {
-  background: url(../img/bg.png) no-repeat;
-  background: contain;
-}
-
 .mainWrap .titleArea {
   background: url(../img/titleArea.png) no-repeat;
   background-size: cover;
@@ -91,6 +86,11 @@ aside .right_Btn::before {
 footer .paltform_Logo {
   background: url(../img/platform_logo.png) no-repeat;
   background-size: 500%;
+}
+
+.bg {
+  background: url(../img/bg.png) center;
+  background: contain;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -228,8 +228,8 @@ html body header .top .lang .lang_icon {
 }
 html body header .top .lang .lang_icon::before {
   content: ">";
-  width: 31px;
-  height: 27px;
+  width: 11px;
+  height: 9px;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -392,6 +392,8 @@ html body header nav ul li:hover, html body header nav ul li:active, html body h
 }
 html body .marquee {
   width: 100%;
+  min-width: 1400px;
+  height: 100%;
   padding-top: 69px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -401,7 +403,7 @@ html body .marquee .mqLine {
   width: 100%;
   height: 30px;
   background: rgba(255, 255, 255, 0.85);
-  padding: 9px 10px 10px 220px;
+  padding: 9px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
@@ -417,10 +419,12 @@ html body .marquee .mqLine .mq_icon {
   left: 189px;
 }
 html body .marquee .mqLine .textBox {
-  width: 70%;
+  width: 100%;
+  max-width: 1400px;
   height: 30px;
   overflow: hidden;
   white-space: nowrap;
+  margin: 0 auto;
   position: relative;
 }
 html body .marquee .mqLine .textBox .content {
@@ -450,10 +454,18 @@ html body .marquee .mqLine .textBox .content {
 }
 html body .marquee .bannerArea {
   width: 100%;
-  height: 0;
-  background-size: contain;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  overflow-x: hidden;
   border-bottom: 2px solid white;
   position: relative;
+}
+html body .marquee .bannerArea .banner {
+  width: 100%;
+  max-height: 413px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 html body .marquee .bannerArea::before, html body .marquee .bannerArea::after {
   width: 37px;
@@ -482,14 +494,13 @@ html body .marquee .bannerArea::after {
 html body .mainWrap {
   width: 100%;
   height: auto;
-  padding-top: 406px;
 }
 html body .mainWrap .titleArea {
   width: 100%;
   height: 114px;
 }
 html body .mainWrap .center {
-  width: 1500px;
+  width: 1400px;
   height: auto;
   margin: 0 auto;
 }
@@ -498,8 +509,8 @@ html body .mainWrap .center .gameTypeArea {
   height: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 485px 20px 485px 20px 485px;
-  grid-template-columns: repeat(3, 485px);
+  -ms-grid-columns: 446px 20px 446px 20px 446px;
+  grid-template-columns: repeat(3, 446px);
   -ms-grid-rows: 189px 80px 189px;
   grid-template-rows: repeat(2, 189px);
   gap: 80px 20px;
@@ -530,7 +541,7 @@ html body .mainWrap .center .gameTypeArea > *:nth-child(6) {
   -ms-grid-column: 5;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock {
-  width: 485px;
+  width: 446px;
   height: 168px;
   background: white;
   border-radius: 28px;
@@ -541,6 +552,10 @@ html body .mainWrap .center .gameTypeArea .gameBlock {
           box-shadow: 3px 3px 3px 3px #879ba4;
   position: relative;
   cursor: pointer;
+}
+html body .mainWrap .center .gameTypeArea .gameBlock:hover .typePic, html body .mainWrap .center .gameTypeArea .gameBlock:active .typePic, html body .mainWrap .center .gameTypeArea .gameBlock.active .typePic {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 html body .mainWrap .center .gameTypeArea .gameBlock:hover .typePic.sport::before, html body .mainWrap .center .gameTypeArea .gameBlock:active .typePic.sport::before, html body .mainWrap .center .gameTypeArea .gameBlock.active .typePic.sport::before {
   -webkit-transform: translate(15px, -5%);
@@ -585,7 +600,7 @@ html body .mainWrap .center .gameTypeArea .gameBlock:hover .typePic.slot::after,
   transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock .typePic {
-  width: 467px;
+  width: 427px;
   height: 150px;
   border-radius: 16px;
   -webkit-box-shadow: 2px 2px 2px 2px #879ba4;
@@ -651,7 +666,7 @@ html body .mainWrap .center .gameTypeArea .gameBlock .typePic::before {
   height: 241px;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -10px;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock .typePic::after {
   content: " ";
@@ -885,6 +900,11 @@ html body aside .left_Btn {
   position: absolute;
   top: 688px;
   left: 22px;
+  cursor: pointer;
+}
+html body aside .left_Btn:hover, html body aside .left_Btn:active, html body aside .left_Btn.active {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 html body aside .left_Btn::before {
   content: " ";
@@ -902,6 +922,11 @@ html body aside .right_Btn {
   position: absolute;
   top: 688px;
   right: 22px;
+  cursor: pointer;
+}
+html body aside .right_Btn:hover, html body aside .right_Btn:active, html body aside .right_Btn.active {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 html body aside .right_Btn::before {
   content: " ";
@@ -1144,4 +1169,12 @@ html body footer .bottomArea .center ul li button:last-child {
 html body main {
   width: 100%;
   height: auto;
+}
+html body main .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 464px;
+  left: 0;
+  z-index: -1;
 }

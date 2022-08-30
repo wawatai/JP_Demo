@@ -671,6 +671,7 @@ html body .mainWrap .center .gameTypeArea .gameBlock .inBtn {
 }
 html body .mainWrap .newsArea {
   width: 100%;
+  max-width: 2000px;
   min-width: 1800px;
   height: 362px;
   padding: 171px 220px;
@@ -694,7 +695,7 @@ html body .mainWrap .newsArea::after {
   height: 140px;
   position: absolute;
   top: 47px;
-  right: 455px;
+  left: 1113px;
   -webkit-animation: bounce 2s 3.8s ease-in infinite;
           animation: bounce 2s 3.8s ease-in infinite;
 }
@@ -978,6 +979,7 @@ html body footer {
 }
 html body footer .topArea {
   width: 100%;
+  min-width: 1110px;
   height: 109px;
   background: #1d2088;
   padding: 38px 160px;

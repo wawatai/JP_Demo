@@ -171,6 +171,7 @@
 
   .newsArea {
     width: 100%;
+    max-width: 2000px;
     min-width: 1800px;
     height: 362px;
     padding: 171px 220px;
@@ -193,7 +194,7 @@
       height: 140px;
       position: absolute;
       top: 47px;
-      right: 455px;
+      left: 1113px;
       animation: bounce 2s 3.8s ease-in infinite;
 
       @keyframes bounce {

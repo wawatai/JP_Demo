@@ -10,28 +10,31 @@ header nav .navDeco {
 }
 
 //marquee
-.marquee .mq_icon {
+.ad .mq_icon {
     background: url(../img/Icon_mq.png) no-repeat;
 }
-
+.ad .textBox::after {
+    background: url(../img/Icon_mq.png) no-repeat;
+}
 
 //mainWrap
 .mainWrap .titleArea {
     background: url(../img/titleArea.png) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
-.mainWrap .typePic {
+.mainWrap .typePic .child {
     background: url(../img/gameType_Btn.png) no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
-.mainWrap .typePic::before {
+.mainWrap .sidePic {
     background: url(../img/gType_sidePic.png) no-repeat;
     background-size: 600%;
 }
 
-.mainWrap .typePic::after {
+.mainWrap .sidePic::after {
     background: url(../img/gType_Name.png) no-repeat;
     background-size: 100%;
 }
@@ -95,5 +98,5 @@ footer .paltform_Logo {
 //BG
 .bg {
     background: url(../img/bg.png) center;
-    background: contain;
+    background-size: 100%;
 }

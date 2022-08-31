@@ -1,10 +1,13 @@
 .mainWrap {
   width: 100%;
   height: auto;
+  position: relative;
 
   .titleArea {
     width: 100%;
     height: 114px;
+    max-height: 122px;
+    margin-top: -10px;
   }
 
   .center {
@@ -23,7 +26,7 @@
 
       .gameBlock {
         width: 446px;
-        height: 168px;
+        height: 161px;
         background: $gameTypeBG;
         border-radius: 28px;
         padding: 9px;
@@ -35,110 +38,51 @@
         &:hover,
         &:active,
         &.active {
-          .typePic {
-            transform: scale(1);
+          .sidePic {
+            transform: translate(15px, -5%);
+            transition: all 0.2s ease-in;
           }
-          .typePic.sport::before {
+          .sidePic.sport {
             transform: translate(15px, -5%);
             transition: all 0.2s ease-in;
           }
 
-          .typePic.typePic.live::before {
-            transform: translate(15px, -2%);
+          .sidePic.live {
+            transform: translate(18px, 0px);
             transition: all 0.2s ease-in;
           }
 
-          .typePic.typePic.slot::before {
-            transform: scale(1.08);
+          .sidePic.slot {
+            transform: translate(9.5px, 0px);
             transition: all 0.2s ease-in;
           }
 
-          .typePic.typePic.ticket::before,
-          .typePic.typePic.fish::before,
-          .typePic.typePic.poker::before {
-            transform: rotate(-0.1turn);
-            transition: all 0.2s ease-in;
-          }
-
-          .typePic::after {
+          
+          .sidePic::after {
             transform: scale(1.2);
             transition: all 0.2s ease-in;
           }
 
-          .typePic.slot::after {
+          .typePic .child {
+            transform: scale(1.2);
+            transition: all 0.2s ease-in;
+          }
+
+          .inBtn {
             transform: scale(1.1);
+            filter: hue-rotate(-60deg);
             transition: all 0.2s ease-in;
           }
         }
 
         .typePic {
-          width: 427px;
-          height: 150px;
+          width: 425px;
+          height: 138px;
           border-radius: 16px;
           box-shadow: 2px 2px 2px 2px $gametypeBoder;
+          overflow: hidden;
+          position: relative;
 
-          &.sport {
-            background-position-y: 0%;
-
-            &::before {
-              background-position-x: 0%;
-            }
-
-            &::after {
-              background-position-y: 0%;
-            }
-          }
-
-          &.live {
-            background-position-y: 20%;
-
-            &::before {
-              background-position-x: 20%;
-            }
-            &::after {
-              background-position-y: 20%;
-            }
-          }
-
-          &.slot {
-            background-position-y: 40%;
-            &::before {
-              background-position-x: 40%;
-            }
-            &::after {
-              background-position-y: 40%;
-            }
-          }
-
-          &.ticket {
-            background-position-y: 60%;
-            &::before {
-              background-position-x: 60%;
-            }
-            &::after {
-              background-position-y: 60%;
-            }
-          }
-
-          &.fish {
-            background-position-y: 80%;
-            &::before {
-              background-position-x: 80%;
-            }
-            &::after {
-              background-position-y: 80%;
-            }
-          }
-
-          &.poker {
-            background-position-y: 100%;
-            &::before {
-              background-position-x: 100%;
-            }
-            &::after {
-              background-position-y: 100%;
-            }
-          }
 
           &::before {
             content: " ";
@@ -149,13 +93,98 @@
             left: -10px;
           }
 
+          .child {
+            width: 100%;
+            height: 100%;
+
+            &.sport {
+              background-position-y: 0%;
+            }
+
+            &.live {
+                background-position-y: 20%;
+            }
+
+            &.slot {
+                background-position-y: 40%;
+            }
+
+            &.ticket {
+                background-position-y: 60%;
+            }
+
+            &.fish {
+                background-position-y: 80%;
+            }
+
+            &.poker {
+                background-position-y: 100%;
+            }
+          }
+        }
+
+        .sidePic {
+          width: 234px;
+          height: 241px;
+          position: absolute;
+          bottom: 0;
+          left: -10px;
+
           &::after {
             content: " ";
             width: 283px;
             height: 106px;
             position: absolute;
-            top: 19px;
-            right: 20px;
+            top: 105px;
+            right: -207px;
+          }
+
+          &.sport {
+            background-position-x: 0%;
+
+            &::after {
+              background-position-y: 0%;
+            }
+          }
+
+          &.live {
+            background-position-x: 20%;
+            
+            &::after {
+              background-position-y: 20%;
+            }
+          }
+
+          &.slot {
+            background-position-x: 40%;
+            
+            &::after {
+              background-position-y: 40%;
+            }
+          }
+
+          &.ticket {
+            background-position-x: 60%;
+            
+            &::after {
+              background-position-y: 60%;
+            }
+          }
+
+          &.fish {
+            background-position-x: 80%;
+            
+            &::after {
+              background-position-y: 80%;
+            }
+          }
+
+          &.poker {
+            background-position-x: 100%;
+            
+            &::after {
+              background-position-y: 100%;
+            }
           }
         }
 
@@ -164,7 +193,7 @@
           height: 58px;
           position: absolute;
           bottom: -23px;
-          left: 60px;
+          left: 40px;
           cursor: pointer;
         }
       }
@@ -173,9 +202,8 @@
 
   .newsArea {
     width: 100%;
-    max-width: 2000px;
-    min-width: 1800px;
     height: 362px;
+    min-height: 360px;
     padding: 171px 220px;
     box-sizing: border-box;
     position: relative;
@@ -294,7 +322,7 @@
         }
 
         &.wallet {
-          padding: 87px 23px 15px 18px;
+          padding: 87px 23px 15px 15px;
 
           &::after {
             background-position-x: 69%;

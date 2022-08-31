@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script> -->
-    <!-- <script src="./js/javascript.js"></script> -->
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./js/js.jsx"></script>
     <!-- <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon"> -->
 </head>
 <body>
     <header>
+        <div class="logo"><a href="#">LOGO</a></div>
         <div class="top">
             <!-- 語言列 -->
             <div class="lang">
@@ -23,6 +27,7 @@
                     <option>ENGLISH</option>
                 </select>
             </div>
+            <div class="empty"></div>
             <!-- 右部-未登入 -->
             <div class="unLog">
                 <p class="forgotPW">パスワード紛失</p>
@@ -36,31 +41,35 @@
         <nav>
             <div class="navDeco"></div>
             <ul>
-                <li>スポーツイベント</li>
-                <li class="active">ライブカジノ</li>
-                <li>スロットゲーム</li>
-                <li>宝くじ</li>
-                <li>釣り機</li>
-                <li>テーブルゲーム</li>
-                <li>テーブルゲーム</li>
-                <li>ディスカウント</li>
-                <li>VIPメンバー</li>
-                <li>ウォレット</li>
+                <li><a>スポーツイベント</a></li>
+                <li class="active"><a>ライブカジノ</a></li>
+                <li><a>スロットゲーム</a></li>
+                <li><a>宝くじ</a></li>
+                <li><a>釣り機</a></li>
+                <li><a>テーブルゲーム</a></li>
+                <li><a>テーブルゲーム</a></li>
+                <li><a>ディスカウント</a></li>
+                <li><a>VIPメンバー</a></li>
+                <li><a>ウォレット</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <!-- 跑馬燈 -->
-        <div class="marquee">
+        <div class="ad">
             <div class="mqLine">
-                <i class="mq_icon"></i>
-                <div class="textBox">
-                    <p class="content">発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表</p>
+                <div class="mqBox">
+                        <i class="mq_icon"></i>
+                    <div class="textBox">
+                        <p class="content">発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表発表</p>
+                    </div>
                 </div>
             </div>
-            <div class="bannerArea">
-                <img class="banner" src="./img/banner.png">
-            </div>
+            <ul class="single-item">
+                <li><img class="banner" src="./img/banner.png"></li>
+                <li><img class="banner" src="./img/banner.png"></li>
+                <li><img class="banner" src="./img/banner.png"></li>
+            </ul>
         </div>
         <div class="mainWrap">
             <div class="titleArea"></div>
@@ -68,32 +77,50 @@
                 <!-- 遊戲類型按鈕 -->
                 <div class="gameTypeArea">
                     <div class="gameBlock">
-                        <i class="typePic sport"></i>
+                        <div class="typePic">
+                            <div class="child sport"></div>
+                        </div>
+                        <i class="sidePic sport"></i>
                         <p class="typeName"></p>
                         <div class="inBtn"></div>
                     </div>
                     <div class="gameBlock">
-                        <i class="typePic live"></i>
+                        <div class="typePic">
+                            <div class="child live"></div>
+                        </div>
+                        <i class="sidePic live"></i>
                         <p class="typeName"></p>
                         <div class="inBtn"></div>
                     </div>
                     <div class="gameBlock">
-                        <i class="typePic slot"></i>
+                        <div class="typePic">
+                            <div class="child slot"></div>
+                        </div>
+                        <i class="sidePic slot"></i>
                         <p class="typeName"></p>
                         <div class="inBtn"></div>
                     </div>
                     <div class="gameBlock">
-                        <i class="typePic ticket"></i>
+                        <div class="typePic">
+                            <div class="child ticket"></div>
+                        </div>
+                        <i class="sidePic ticket"></i>
                         <p class="typeName"></p>
                         <div class="inBtn"></div>
                     </div>
                     <div class="gameBlock">
-                        <i class="typePic fish"></i>
+                        <div class="typePic">
+                            <div class="child fish"></div>
+                        </div>
+                        <i class="sidePic fish"></i>
                         <p class="typeName"></p>
                         <div class="inBtn"></div>
                     </div>
                     <div class="gameBlock">
-                        <i class="typePic poker"></i>
+                        <div class="typePic">
+                            <div class="child poker"></div>
+                        </div>
+                        <i class="sidePic poker"></i>
                         <p class="typeName"></p>
                         <div class="inBtn"></div>
                     </div>

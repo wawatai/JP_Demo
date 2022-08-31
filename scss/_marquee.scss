@@ -1,9 +1,7 @@
-.marquee {
+.ad {
   width: 100%;
   min-width: 1400px;
-  height: 100%;
-  padding-top: 69px;
-  box-sizing: border-box;
+  padding-top: 70px;
   position: relative;
 
   //文字跑馬燈
@@ -17,76 +15,143 @@
     top: 100px;
     left: 0;
     z-index: 1; 
-
-    .mq_icon {
-      width: 22px;
-      height: 18px;
-      position: absolute;
-      top: 9px;
-      left: 189px;
-    }
-
-    .textBox {
+   
+    .mqBox {
       width: 100%;
-      max-width: 1400px;
-      height: 30px;
-      overflow: hidden;
-      white-space: nowrap;
+      max-width: 1253px;
+      height: auto;
       margin: 0 auto;
       position: relative;
 
-      .content {
-        margin-left: 35px;
-        animation: mq_ani 15s linear 0s infinite;
+      .mq_icon {
+        width: 22px;
+        height: 18px;
+        position: absolute;
+        top: 0px;
+        left: -21px;
+      }
 
-        @keyframes mq_ani {
-          100% {
-            transform: translateX(-100%);
-          }
-          0% {
-            transform: translateX(100%);
+      .textBox {
+        width: auto;
+        max-width: 1355px;
+        height: 30px;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+  
+        
+  
+        // &::after {
+        //   content: "";
+        //   width: 22px;
+        //   height: 18px;
+        //   position: absolute;
+        //   top: 0px;
+        //   left: -5px;
+        // }
+        
+        .content {
+          margin-left: 35px;
+          animation: mq_ani 15s linear 0s infinite;
+  
+          @keyframes mq_ani {
+            100% {
+              transform: translateX(-100%);
+            }
+            0% {
+              transform: translateX(100%);
+            }
           }
         }
       }
     }
   }
 
-  .bannerArea {
-    width: 100%;
-    max-height: fit-content;
-    overflow-x: hidden;
-    border-bottom: 2px solid $mqBoder;
-    position: relative;
+  .single-item {
+    margin: 0;
 
-    .banner {
-      width: 100%;
-      max-height: 413px;
-      object-fit: cover;
+    .slick-slide {
+        outline: none;
+        object-fit: cover;
+        object-position: center;
+        cursor: pointer;
     }
 
-    &::before,
-    &::after {
-      width: 37px;
-      height: 78px;
-      color: $mainfont;
-      font-size: 30px;
-      font-weight: bold;
-      padding: 23px 4px;
-      box-sizing: border-box;
-      @include banner_Btn;
-      position: absolute;
-      top: 189px;
-      cursor: pointer;
+    .slick-arrow {
+        z-index: 1;
+        width: 87px;
+        height: 494px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(-45deg);
+            width: 15px;
+            height: 15px;
+            border: solid 6px $mainfont;
+            border-width: 2px 0 0 2px;
+        }
+
+        &::after {
+          content: " ";
+          width: 37px;
+          height: 78px;
+          background: $headerBG;
+          border-radius: 10px;
+          position: absolute;
+          top: 211px;
+          z-index: -1;
+        }
+
+        &.slick-prev {
+            left: 0px;
+            &::after {
+              left: 20px;
+            }
+        }
+
+        &.slick-next {
+            right: 0px;
+            
+            &::before {
+                transform: translate(-50%,-50%) rotate(45deg) scaleX(-1);
+            }
+
+            &::after {
+              right: 20px;
+            }
+        }
     }
 
-    &::before {
-      content: "＜";
-      left: 15px;
+    .slick-dots {
+        bottom: 0px;
+
+        li {
+            margin: 0;
+
+            &.slick-active {
+
+                button {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            button {
+                &::before {
+                    width: 6px;
+                    height: 6px;
+                    background: $mainfont;
+                    border-radius: 50%;
+                    color: transparent;
+                }
+            }
+        }
     }
-    &::after {
-      content: "＞";
-      right: 15px;
-    }
-  }
 }
+}
+
 

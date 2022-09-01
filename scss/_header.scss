@@ -175,8 +175,8 @@ header {
             top: 2px;
             left: 0;
           }
-        }        
-        
+        }
+
         &::after {
           content: " ";
           width: 2px;
@@ -187,37 +187,32 @@ header {
           right: 0;
         }
 
-        
-
         &:hover,
         &:active,
         &.active {
-
           background: $navHover;
 
           a {
-              color: $subfont;
-              font-weight: bold;
-              transition: all 0.2s ease-in;
+            color: $subfont;
+            font-weight: bold;
+            transition: all 0.2s ease-in;
           }
         }
-    }
-    
-        &:first-child::before {
-          content: " ";
-          width: 2px;
-          height: 48px;
-          background: $navBorder;
-          position: absolute;
-          top: 2px;
-          left: 0;
-        }
+      }
 
-        &:last-child::after {
-          display: none;
-        }
+      &:first-child::before {
+        content: " ";
+        width: 2px;
+        height: 48px;
+        background: $navBorder;
+        position: absolute;
+        top: 2px;
+        left: 0;
+      }
+
+      &:last-child::after {
+        display: none;
       }
     }
   }
-
-
+}

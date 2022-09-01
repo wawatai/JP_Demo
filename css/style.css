@@ -13,10 +13,6 @@ header nav .navDeco {
   background: url(../img/Icon_mq.png) no-repeat;
 }
 
-.ad .textBox::after {
-  background: url(../img/Icon_mq.png) no-repeat;
-}
-
 .mainWrap .titleArea {
   background: url(../img/titleArea.png) no-repeat;
   background-size: cover;
@@ -93,8 +89,8 @@ footer .paltform_Logo {
   background-size: 500%;
 }
 
-.bg {
-  background: url(../img/bg.png) center;
+.mainWrap {
+  background: url("../img/bg.png") no-repeat center;
   background-size: 100%;
 }
 
@@ -102,19 +98,87 @@ footer .paltform_Logo {
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -126,8 +190,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -143,16 +216,20 @@ body {
   font-family: "微軟正黑體";
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -171,7 +248,8 @@ button {
   font-family: "微軟正黑體";
 }
 
-select, input {
+select,
+input {
   outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -194,7 +272,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 html body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
   position: relative;
 }
 html body header {
@@ -437,45 +514,50 @@ html body header nav ul:last-child::after {
 html body .ad {
   width: 100%;
   min-width: 1400px;
-  padding-top: 70px;
   position: relative;
 }
 html body .ad .mqLine {
   width: 100%;
-  height: 30px;
+  height: auto;
   background: rgba(255, 255, 255, 0.85);
-  padding: 9px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   position: absolute;
-  top: 100px;
+  top: 0;
   left: 0;
   z-index: 1;
 }
 html body .ad .mqLine .mqBox {
-  width: 100%;
-  max-width: 1253px;
-  height: auto;
+  width: 1400px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
-  position: relative;
 }
 html body .ad .mqLine .mqBox .mq_icon {
   width: 22px;
   height: 18px;
-  position: absolute;
-  top: 0px;
-  left: -21px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 html body .ad .mqLine .mqBox .textBox {
-  width: auto;
-  max-width: 1355px;
-  height: 30px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
-  white-space: nowrap;
-  position: relative;
 }
 html body .ad .mqLine .mqBox .textBox .content {
-  margin-left: 35px;
+  display: inline;
+  width: auto;
+  white-space: nowrap;
+  padding-left: 100%;
   -webkit-animation: mq_ani 15s linear 0s infinite;
           animation: mq_ani 15s linear 0s infinite;
 }
@@ -485,8 +567,8 @@ html body .ad .mqLine .mqBox .textBox .content {
             transform: translateX(-100%);
   }
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 @keyframes mq_ani {
@@ -495,8 +577,8 @@ html body .ad .mqLine .mqBox .textBox .content {
             transform: translateX(-100%);
   }
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 html body .ad .single-item {
@@ -504,11 +586,12 @@ html body .ad .single-item {
 }
 html body .ad .single-item .slick-slide {
   outline: none;
+  cursor: pointer;
+}
+html body .ad .single-item .slick-slide img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  cursor: pointer;
 }
 html body .ad .single-item .slick-arrow {
   z-index: 1;
@@ -571,14 +654,15 @@ html body .ad .single-item .slick-dots li button::before {
 }
 html body .mainWrap {
   width: 100%;
+  min-width: 1400px;
   height: auto;
   position: relative;
+  margin-top: -10px;
 }
 html body .mainWrap .titleArea {
   width: 100%;
-  height: 114px;
-  max-height: 122px;
-  margin-top: -10px;
+  height: 0;
+  padding-top: 6%;
 }
 html body .mainWrap .center {
   width: 1400px;
@@ -637,46 +721,32 @@ html body .mainWrap .center .gameTypeArea .gameBlock {
 html body .mainWrap .center .gameTypeArea .gameBlock:hover .sidePic, html body .mainWrap .center .gameTypeArea .gameBlock:active .sidePic, html body .mainWrap .center .gameTypeArea .gameBlock.active .sidePic {
   -webkit-transform: translate(15px, -5%);
           transform: translate(15px, -5%);
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock:hover .sidePic.sport, html body .mainWrap .center .gameTypeArea .gameBlock:active .sidePic.sport, html body .mainWrap .center .gameTypeArea .gameBlock.active .sidePic.sport {
   -webkit-transform: translate(15px, -5%);
           transform: translate(15px, -5%);
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock:hover .sidePic.live, html body .mainWrap .center .gameTypeArea .gameBlock:active .sidePic.live, html body .mainWrap .center .gameTypeArea .gameBlock.active .sidePic.live {
   -webkit-transform: translate(18px, 0px);
           transform: translate(18px, 0px);
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock:hover .sidePic.slot, html body .mainWrap .center .gameTypeArea .gameBlock:active .sidePic.slot, html body .mainWrap .center .gameTypeArea .gameBlock.active .sidePic.slot {
   -webkit-transform: translate(9.5px, 0px);
           transform: translate(9.5px, 0px);
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock:hover .sidePic::after, html body .mainWrap .center .gameTypeArea .gameBlock:active .sidePic::after, html body .mainWrap .center .gameTypeArea .gameBlock.active .sidePic::after {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock:hover .typePic .child, html body .mainWrap .center .gameTypeArea .gameBlock:active .typePic .child, html body .mainWrap .center .gameTypeArea .gameBlock.active .typePic .child {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock:hover .inBtn, html body .mainWrap .center .gameTypeArea .gameBlock:active .inBtn, html body .mainWrap .center .gameTypeArea .gameBlock.active .inBtn {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-filter: hue-rotate(-60deg);
           filter: hue-rotate(-60deg);
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock .typePic {
   width: 425px;
@@ -698,6 +768,8 @@ html body .mainWrap .center .gameTypeArea .gameBlock .typePic::before {
 html body .mainWrap .center .gameTypeArea .gameBlock .typePic .child {
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock .typePic .child.sport {
   background-position-y: 0%;
@@ -723,6 +795,8 @@ html body .mainWrap .center .gameTypeArea .gameBlock .sidePic {
   position: absolute;
   bottom: 0;
   left: -10px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock .sidePic::after {
   content: " ";
@@ -731,6 +805,8 @@ html body .mainWrap .center .gameTypeArea .gameBlock .sidePic::after {
   position: absolute;
   top: 105px;
   right: -207px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 html body .mainWrap .center .gameTypeArea .gameBlock .sidePic.sport {
   background-position-x: 0%;
@@ -775,6 +851,8 @@ html body .mainWrap .center .gameTypeArea .gameBlock .inBtn {
   bottom: -23px;
   left: 40px;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 html body .mainWrap .newsArea {
   width: 100%;
@@ -989,6 +1067,7 @@ html body aside .left_Btn {
   width: 122px;
   height: 127px;
   position: absolute;
+  top: 688px;
   top: 688px;
   left: 22px;
   cursor: pointer;
@@ -1260,12 +1339,5 @@ html body footer .bottomArea .center ul li button:last-child {
 html body main {
   width: 100%;
   height: auto;
-}
-html body main .bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 464px;
-  left: 0;
-  z-index: -1;
+  padding-top: 106px;
 }

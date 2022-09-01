@@ -79,16 +79,21 @@ footer {
               &.active {
                 font-weight: bold;
 
-                &::after {
-                  width: 55%;
-                  left: 0;
+                span {
+
+                  &::after {
+                    width: 100%;
+                  }
                 }
               }
 
-              &.long {
+              span {
+                display: inline-block;
+                position: relative;
+
                 &::after {
                   content: "";
-                  width: 0;
+                  width: 0%;
                   height: 3px;
                   background-color: $subfont;
                   position: absolute;
@@ -96,70 +101,6 @@ footer {
                   bottom: -10px;
                   transition: all 0.2s ease-in-out;
                 }
-
-                &:hover,
-                &:active,
-                &.active {
-                  &::after {
-                    width: 80%;
-                    left: 0;
-                  }
-                }
-              }
-
-              &.short {
-                &::after {
-                  content: "";
-                  width: 0;
-                  height: 3px;
-                  background-color: $subfont;
-                  position: absolute;
-                  left: 0;
-                  bottom: -10px;
-                  transition: all 0.2s ease-in-out;
-                }
-
-                &:hover,
-                &:active,
-                &.active {
-                  &::after {
-                    width: 30%;
-                    left: 0;
-                  }
-                }
-              }
-
-              &.short2 {
-                &::after {
-                  content: "";
-                  width: 0;
-                  height: 3px;
-                  background-color: $subfont;
-                  position: absolute;
-                  left: 0;
-                  bottom: -10px;
-                  transition: all 0.2s ease-in-out;
-                }
-
-                &:hover,
-                &:active,
-                &.active {
-                  &::after {
-                    width: 20%;
-                    left: 0;
-                  }
-                }
-              }
-
-              &::after {
-                content: "";
-                width: 0;
-                height: 3px;
-                background-color: $subfont;
-                position: absolute;
-                left: 0;
-                bottom: -10px;
-                transition: all 0.2s ease-in-out;
               }
 
               &:last-child {

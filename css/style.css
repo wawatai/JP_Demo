@@ -1247,58 +1247,16 @@ html body footer .bottomArea .center ul li p.page {
 html body footer .bottomArea .center ul li p.page:hover, html body footer .bottomArea .center ul li p.page:active, html body footer .bottomArea .center ul li p.page.active {
   font-weight: bold;
 }
-html body footer .bottomArea .center ul li p.page:hover::after, html body footer .bottomArea .center ul li p.page:active::after, html body footer .bottomArea .center ul li p.page.active::after {
-  width: 55%;
-  left: 0;
+html body footer .bottomArea .center ul li p.page:hover span::after, html body footer .bottomArea .center ul li p.page:active span::after, html body footer .bottomArea .center ul li p.page.active span::after {
+  width: 100%;
 }
-html body footer .bottomArea .center ul li p.page.long::after {
+html body footer .bottomArea .center ul li p.page span {
+  display: inline-block;
+  position: relative;
+}
+html body footer .bottomArea .center ul li p.page span::after {
   content: "";
-  width: 0;
-  height: 3px;
-  background-color: #fff100;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-html body footer .bottomArea .center ul li p.page.long:hover::after, html body footer .bottomArea .center ul li p.page.long:active::after, html body footer .bottomArea .center ul li p.page.long.active::after {
-  width: 80%;
-  left: 0;
-}
-html body footer .bottomArea .center ul li p.page.short::after {
-  content: "";
-  width: 0;
-  height: 3px;
-  background-color: #fff100;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-html body footer .bottomArea .center ul li p.page.short:hover::after, html body footer .bottomArea .center ul li p.page.short:active::after, html body footer .bottomArea .center ul li p.page.short.active::after {
-  width: 30%;
-  left: 0;
-}
-html body footer .bottomArea .center ul li p.page.short2::after {
-  content: "";
-  width: 0;
-  height: 3px;
-  background-color: #fff100;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-html body footer .bottomArea .center ul li p.page.short2:hover::after, html body footer .bottomArea .center ul li p.page.short2:active::after, html body footer .bottomArea .center ul li p.page.short2.active::after {
-  width: 20%;
-  left: 0;
-}
-html body footer .bottomArea .center ul li p.page::after {
-  content: "";
-  width: 0;
+  width: 0%;
   height: 3px;
   background-color: #fff100;
   position: absolute;
